@@ -23,7 +23,7 @@ Ce dépôt contient une API Node.js/Express minimale pour gérer des campagnes p
 2. Installer les dépendances
 
 ```bash
-cd /Users/Bienvenu/Projects/NodeProject/projet-technique/test-node
+cd test-node
 pnpm install
 # ou npm install
 ```
