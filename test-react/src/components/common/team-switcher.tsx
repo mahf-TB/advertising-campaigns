@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronsUpDown, Plus } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export type TeamsProps = {
   name: string;
@@ -34,7 +34,7 @@ export function TeamSwitcher({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className={className}>
+      <DropdownMenuTrigger className={className} asChild>
         <Button
           variant={"ghost"}
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground w-full"

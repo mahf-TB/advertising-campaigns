@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
 import RootLayout from "./layout/RootLayout";
+import AddPage from "./pages/AddPage";
+import DetailPage from "./pages/DetailPage";
+import EditPage from "./pages/EditPage";
+import Home from "./pages/Home";
 
 function About() {
   return (
@@ -17,6 +20,30 @@ const router = createBrowserRouter([
     element: (
       <RootLayout>
         <Home />
+      </RootLayout>
+    ),
+  },
+  {
+    path: "/campains",
+    element: (
+      <RootLayout>
+        <AddPage />
+      </RootLayout>
+    ),
+  },
+  {
+    path: "/campains/:id",
+    element: (
+      <RootLayout>
+        <DetailPage />
+      </RootLayout>
+    ),
+  },
+  {
+    path: "/campains/:id/edit",
+    element: (
+      <RootLayout>
+        <EditPage />
       </RootLayout>
     ),
   },

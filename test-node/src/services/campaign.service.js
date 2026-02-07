@@ -33,6 +33,11 @@ const updateCampaignStatus = async (id, status) => {
   return campaign;
 };
 
+const updateCampaign = async (id, data) => {
+  const campaign = await Campaign.findByIdAndUpdate(id, data, { new: true, runValidators: true });
+  return campaign;
+};
+
 const getCampaignStats = async (id) => {
   const campaign = await Campaign.findById(id);
   if (!campaign) return null;
@@ -44,7 +49,10 @@ const getCampaignStats = async (id) => {
   const ctr = impressions === 0 ? 0 : clicks / impressions;
   const cpc = clicks === 0 ? null : budget / clicks;
 
+  const base = typeof campaign.toObject === 'function' ? campaign.toObject() : campaign;
+
   return {
+    ...base,
     impressions,
     clicks,
     budget,
@@ -58,5 +66,6 @@ module.exports = {
   getCampaigns,
   getCampaignById,
   updateCampaignStatus,
+  updateCampaign,
   getCampaignStats
 };

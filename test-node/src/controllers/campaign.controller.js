@@ -29,6 +29,14 @@ const patchStatus = asyncHandler(async (req, res) => {
   res.json(updated);
 });
 
+const updateCampaign = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const payload = req.body;
+  const updated = await campaignService.updateCampaign(id, payload);
+  if (!updated) return res.status(404).json({ message: 'Campaign not found' });
+  res.json(updated);
+});
+
 const getStats = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const stats = await campaignService.getCampaignStats(id);
@@ -41,5 +49,6 @@ module.exports = {
   listCampaigns,
   getCampaign,
   patchStatus,
+  updateCampaign,
   getStats
 };
