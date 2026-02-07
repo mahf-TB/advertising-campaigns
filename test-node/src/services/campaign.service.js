@@ -56,8 +56,8 @@ const getCampaignStats = async (id) => {
     impressions,
     clicks,
     budget,
-    ctr,
-    cpc
+    ctr:ctr * 100,
+    cpc 
   };
 };
 

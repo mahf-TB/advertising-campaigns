@@ -113,13 +113,13 @@ const DetailPage = () => {
               <div>
                 <dt className="text-muted-foreground">CTR</dt>
                 <dd className="font-medium">
-                  {campaign?.ctr ? campaign.ctr.toFixed(2) : "—"}
+                  {campaign?.ctr ? campaign.ctr.toFixed(2) : "—"}%
                 </dd>
               </div>
               <div>
                 <dt className="text-muted-foreground">CPC</dt>
                 <dd className="font-medium">
-                  {campaign?.cpc ? campaign.cpc.toFixed(2) : "—"}
+                  {campaign?.cpc ? campaign.cpc.toFixed(2) : "—"}€
                 </dd>
               </div>
             </dl>
