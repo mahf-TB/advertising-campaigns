@@ -87,8 +87,3 @@ Ces choix visent la simplicité, la rapidité de prototypage et la facilité d'�
 - Meilleure observabilité : logs structurés, métriques et tracing distribué.
 - CI/CD : linting, tests et déploiement automatisés.
 
-## Notes finales
-Si vous voulez, je peux :
-- Lancer les tests et partager les résultats.
-- Ajouter un fichier `.env.example`.
-- Générer une documentation OpenAPI.
