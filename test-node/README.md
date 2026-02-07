@@ -83,7 +83,6 @@ Ces choix visent la simplicité, la rapidité de prototypage et la facilité d'�
 
 ## Améliorations possibles (avec plus de temps)
 - Ajouter authentification (JWT) et autorisation par rôle.
-- Pagination, filtrage et recherches avancées pour les listes de campagnes.
 - Ajout d'une interface frontend (React/Next) et d'une API publique documentée (OpenAPI/Swagger).
 - Meilleure observabilité : logs structurés, métriques et tracing distribué.
 - CI/CD : linting, tests et déploiement automatisés.
